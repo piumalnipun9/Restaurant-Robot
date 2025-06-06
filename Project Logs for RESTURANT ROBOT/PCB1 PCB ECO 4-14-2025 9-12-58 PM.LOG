@@ -1,0 +1,80 @@
+Removed Member From Class: ClassName=SAM3X-MCU Member=C1
+Removed Member From Class: ClassName=SAM3X-MCU Member=C2
+Removed Member From Class: ClassName=USB-C Member=C5
+Removed Member From Class: ClassName=SOUND SYSTEM Member=C8
+Removed Member From Class: ClassName=USB-C Member=C21
+Removed Member From Class: ClassName=USB-C Member=U3
+Added Component: Designator=R?(FP-CR0603-IPC_A)
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Composition"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.45mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Military Standard"; Value = "Not"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "100mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "470R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "200ppm/°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Thickness"; Value = "457um"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=RV?(BOUR-CG0603-2_V)
+Add component (AddParameter): Name = "CO"; Value = "0.5 pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.bourns.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.bourns.com/data/global/pdfs/MLC.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "Rev. S"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Bourns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40 to 85 degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "2-Pin SMD, Body 1.6 x 0.8 mm, Pitch 1.52 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "CG0603-2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packing"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "CG0603MLC-05E"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RT"; Value = "1 ns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VC"; Value = "20 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VDC"; Value = "5 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VT"; Value = "150 V"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=USB-C Member=Component C1 CL21B104KOANNNC
+Added Member To Class: ClassName=USB-C Member=Component C3 CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C6 CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C7 CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C9 CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C10 CL21A225KOFNNNG
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C11 CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C15 CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C16 CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C17 CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C18 CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C20 C0805C120J5GACTU
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C22 C0805C120J5GACTU
+Added Member To Class: ClassName=SAM3X-MCU Member=Component C23 C0805C120J5GACTU
+Added Member To Class: ClassName=SOUND SYSTEM Member=Component C24 CL21B104KOANNNC
+Added Member To Class: ClassName=USB-C Member=Component D2 SMBJ6.0CA
+Added Member To Class: ClassName=METAL DETECT Member=Component Q? LTV-247
+Added Member To Class: ClassName=USB-C Member=Component R17 RC0805JR-0710KL
+Added Member To Class: ClassName=SOUND SYSTEM Member=Component R18 RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=SAM3X-MCU Member=Component R? CR0603-JW-471GLF
+Added Member To Class: ClassName=USB-C Member=Component RV? CG0603MLC-05E
+Added Member To Class: ClassName=USB-C Member=Component U1 AMS1117-3.3
+Added Member To Class: ClassName=SOUND SYSTEM Member=Component U4 W25Q128FVSIG
+Added Member To Class: ClassName=SAM3X-MCU Member=Component Y2 32.768KHZ

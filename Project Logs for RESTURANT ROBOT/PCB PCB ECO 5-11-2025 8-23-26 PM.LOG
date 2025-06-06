@@ -1,0 +1,45 @@
+Added Component: Designator=TP1(KEYSTONE_5000)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Test Point Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP2(KEYSTONE_5000)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Test Point Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP3(KEYSTONE_5000)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Test Point Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP4(KEYSTONE_5000)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Test Point Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP5(KEYSTONE_5000)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "5000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Test Point Keystone Electronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/5000/Keystone/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VBUS Pin=TP1-TP
+Added Pin To Net: NetName=GND Pin=TP2-TP
+Added Pin To Net: NetName=+3V3 Pin=TP3-TP
+Added Pin To Net: NetName=+5 Pin=TP4-TP
+Added Pin To Net: NetName=+12 Pin=TP5-TP
+Added Member To Class: ClassName=SAM3X-MCU Member=Component TP1 5000
+Added Member To Class: ClassName=SAM3X-MCU Member=Component TP2 5000
+Added Member To Class: ClassName=SAM3X-MCU Member=Component TP3 5000
+Added Member To Class: ClassName=SAM3X-MCU Member=Component TP4 5000
+Added Member To Class: ClassName=SAM3X-MCU Member=Component TP5 5000

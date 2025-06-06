@@ -1,0 +1,99 @@
+Removed Pin From Net: NetName=METAL_SEN1 Pin=J4-1
+Removed Pin From Net: NetName=METAL_SEN2 Pin=J4-2
+Removed Pin From Net: NetName=METAL_SEN3 Pin=J4-3
+Removed Pin From Net: NetName=METAL_SEN4 Pin=J4-4
+Removed Pin From Net: NetName=METAL_SEN5 Pin=J4-5
+Removed Pin From Net: NetName=METAL_SEN6 Pin=J4-6
+Removed Pin From Net: NetName=METAL_SEN7 Pin=J4-7
+Removed Pin From Net: NetName=METAL_SEN8 Pin=J4-8
+Removed Pin From Net: NetName=+3V3 Pin=J5-1
+Removed Pin From Net: NetName=GND Pin=J5-2
+Removed Pin From Net: NetName=TRG_SONAR1 Pin=J5-3
+Removed Pin From Net: NetName=PWM_SONAR1 Pin=J5-4
+Removed Pin From Net: NetName=+3V3 Pin=J6-1
+Removed Pin From Net: NetName=GND Pin=J6-2
+Removed Pin From Net: NetName=TRG_SONAR2 Pin=J6-3
+Removed Pin From Net: NetName=PWM_SONAR2 Pin=J6-4
+Removed Pin From Net: NetName=+3V3 Pin=J8-1
+Removed Pin From Net: NetName=GND Pin=J8-2
+Removed Pin From Net: NetName=TRG_SONAR3 Pin=J8-3
+Removed Pin From Net: NetName=PWM_SONAR3 Pin=J8-4
+Removed Pin From Net: NetName=+3V3 Pin=J9-1
+Removed Pin From Net: NetName=GND Pin=J9-2
+Removed Pin From Net: NetName=SCL Pin=J9-3
+Removed Pin From Net: NetName=SDA Pin=J9-4
+Removed Pin From Net: NetName=GND Pin=J9-7
+Removed Pin From Net: NetName=I2C_INT Pin=J9-8
+Removed Pin From Net: NetName=GND Pin=P1-1
+Removed Pin From Net: NetName=DB0 Pin=P1-2
+Removed Pin From Net: NetName=+3V3 Pin=P1-3
+Removed Pin From Net: NetName=DB1 Pin=P1-4
+Removed Pin From Net: NetName=DB2 Pin=P1-6
+Removed Pin From Net: NetName=RS Pin=P1-7
+Removed Pin From Net: NetName=DB3 Pin=P1-8
+Removed Pin From Net: NetName=WR Pin=P1-9
+Removed Pin From Net: NetName=DB4 Pin=P1-10
+Removed Pin From Net: NetName=RD Pin=P1-11
+Removed Pin From Net: NetName=DB5 Pin=P1-12
+Removed Pin From Net: NetName=DB6 Pin=P1-14
+Removed Pin From Net: NetName=DB7 Pin=P1-16
+Removed Pin From Net: NetName=SPI_CLK1 Pin=P1-18
+Removed Pin From Net: NetName=SPI_CS1 Pin=P1-20
+Removed Pin From Net: NetName=SPI_MISO1 Pin=P1-26
+Removed Pin From Net: NetName=CS Pin=P1-29
+Removed Pin From Net: NetName=RESET Pin=P1-33
+Removed Pin From Net: NetName=+5 Pin=P1-35
+Removed Pin From Net: NetName=LED_A Pin=P1-37
+Removed Pin From Net: NetName=JTAG_TMS Pin=R4-1
+Removed Pin From Net: NetName=JTAG_TDO Pin=R5-1
+Removed Pin From Net: NetName=JTAG_TDI Pin=R6-1
+Removed Pin From Net: NetName=JTAG_TCK Pin=R7-1
+Removed Pin From Net: NetName=SCL Pin=R8-1
+Removed Pin From Net: NetName=SDA Pin=R9-1
+Added Component: Designator=J?(SAMTEC_FTSH-104-03-F-D)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "FTSH-104-03-F-D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J?(SAMTEC_MTLW-102-XX-X-D-XXX)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/MTLW-102-05-G-D-180/Samtec/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MTLW-102-05-G-D-180"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MTLW-102-05-G-D-180/Samtec/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "RX TX"; VariantName = "[No Variations]"
+Added Component: Designator=J?(SAMTEC_MTLW-102-XX-X-D-XXX)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/MTLW-102-05-G-D-180/Samtec/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MTLW-102-05-G-D-180"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MTLW-102-05-G-D-180/Samtec/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = " SPI BUS"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3V3 Pin=J?-02
+Added Pin To Net: NetName=+3V3 Pin=J?-02
+Added Pin To Net: NetName=GND Pin=J?-04
+Added Pin To Net: NetName=GND Pin=J?-06
+Added Pin To Net: NetName=GND Pin=J?-08
+Add Net: Net with name "JTAG_TCK" already exists
+Add Net: Net with name "JTAG_TDI" already exists
+Add Net: Net with name "JTAG_TDO" already exists
+Add Net: Net with name "JTAG_TMS" already exists
+Add Net: Net with name "NRST" already exists
+Add Net: Net with name "RX" already exists
+Add Net: Net with name "SP1_MISO2" already exists
+Add Net: Net with name "SP1_MOSI2" already exists
+Added Pin To Net: NetName=SPI_CLK3 Pin=J?-02
+Added Net: Name=SPI_CLK3
+Add Net: Net with name "SPI_CS3" already exists
+Added Pin To Net: NetName=SPI_MISO3 Pin=J?-01
+Added Net: Name=SPI_MISO3
+Added Pin To Net: NetName=SPI_MOSI1 Pin=U1-109
+Added Net: Name=SPI_MOSI1
+Added Pin To Net: NetName=SPI_MOSI3 Pin=J?-03
+Added Net: Name=SPI_MOSI3
+Add Net: Net with name "TX" already exists
+Added Member To Class: ClassName=CONNECTORS Member=Component J? FTSH-104-03-F-D
+Added Member To Class: ClassName=CONNECTORS Member=Component J? MTLW-102-XX-X-D-XXX
+Added Member To Class: ClassName=CONNECTORS Member=Component J? MTLW-102-XX-X-D-XXX

@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=+3V3 Pin=+1-1
+Removed Pin From Net: NetName=GND Pin=+1-2
+Removed Pin From Net: NetName=LRCLK_TF Pin=J7-1
+Removed Pin From Net: NetName=BCLK_TK Pin=J7-2
+Removed Pin From Net: NetName=GND Pin=J7-4
+Removed Pin From Net: NetName=+5 Pin=J7-5
+Removed Member From Class: ClassName=CONNECTORS Member=+1
+Added Component: Designator=J10(JST_B2B-XH-A(LF)(SN))
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "JST Sales"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B2B-XH-A(LF)(SN)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Net: Net with name "BCLK_TK" already exists
+Add Net: Net with name "LRCLK_TF" already exists
+Add Net: Net with name "SP1_MISO2" already exists
+Add Net: Net with name "SP1_MOSI2" already exists
+Added Member To Class: ClassName=CONNECTORS Member=Component J10 B2B-XH-A(LF)(SN)

@@ -1,0 +1,76 @@
+Removed Pin From Net: NetName=GND Pin=J?-1
+Removed Pin From Net: NetName=DB0 Pin=J?-2
+Removed Pin From Net: NetName=+3V3 Pin=J?-3
+Removed Pin From Net: NetName=DB1 Pin=J?-4
+Removed Pin From Net: NetName=NC Pin=J?-5
+Removed Pin From Net: NetName=DB2 Pin=J?-6
+Removed Pin From Net: NetName=RS Pin=J?-7
+Removed Pin From Net: NetName=DB3 Pin=J?-8
+Removed Pin From Net: NetName=WR Pin=J?-9
+Removed Pin From Net: NetName=DB4 Pin=J?-10
+Removed Pin From Net: NetName=RD Pin=J?-11
+Removed Pin From Net: NetName=DB5 Pin=J?-12
+Removed Pin From Net: NetName=DB8 Pin=J?-13
+Removed Pin From Net: NetName=DB6 Pin=J?-14
+Removed Pin From Net: NetName=DB9 Pin=J?-15
+Removed Pin From Net: NetName=DB7 Pin=J?-16
+Removed Pin From Net: NetName=DB10 Pin=J?-17
+Removed Pin From Net: NetName=SPI_CLK1 Pin=J?-18
+Removed Pin From Net: NetName=DB11 Pin=J?-19
+Removed Pin From Net: NetName=SPI_CS Pin=J?-20
+Removed Pin From Net: NetName=DB12 Pin=J?-21
+Removed Pin From Net: NetName=SPI_MOSI Pin=J?-22
+Removed Pin From Net: NetName=DB13 Pin=J?-23
+Removed Pin From Net: NetName=NC-CRT Pin=J?-24
+Removed Pin From Net: NetName=DB14 Pin=J?-25
+Removed Pin From Net: NetName=SPI_MISO1 Pin=J?-26
+Removed Pin From Net: NetName=DB15 Pin=J?-27
+Removed Pin From Net: NetName=T_IRQ Pin=J?-28
+Removed Pin From Net: NetName=CS Pin=J?-29
+Removed Pin From Net: NetName=SD_DO Pin=J?-30
+Removed Pin From Net: NetName=FCS Pin=J?-31
+Removed Pin From Net: NetName=SD_CLK Pin=J?-32
+Removed Pin From Net: NetName=+5 Pin=J?-33
+Removed Pin From Net: NetName=SD_DIN Pin=J?-34
+Removed Pin From Net: NetName=RESET Pin=J?-35
+Removed Pin From Net: NetName=SD_CS Pin=J?-36
+Removed Pin From Net: NetName=LED_A Pin=J?-37
+Removed Pin From Net: NetName=NC-SDA Pin=J?-38
+Removed Pin From Net: NetName=NC-INT Pin=J?-39
+Removed Pin From Net: NetName=NC-SCL Pin=J?-40
+Add Net: Net with name "NetDS?_2" already exists
+Add Net: Net with name "SP1_MISO2" already exists
+Add Net: Net with name "SP1_MOSI2" already exists
+Add Net: Net with name "USB_N" already exists
+Add Net: Net with name "USB_P" already exists
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=POWER Member=Component C? C3216X5R1E226M160AB
+Added Member To Class: ClassName=POWER Member=Component C? 100nF
+Added Member To Class: ClassName=POWER Member=Component C? 1206ZD106KAT2A
+Added Member To Class: ClassName=POWER Member=Component C? C3216X5R1E226M160AB
+Added Member To Class: ClassName=POWER Member=Component C? EEE-FK1E221P
+Added Member To Class: ClassName=POWER Member=Component C? 12065C105KAT2A
+Added Member To Class: ClassName=POWER Member=Component C? CC1206KKX7R9BB475
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component C? 4.7uF
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=POWER Member=Component DS? HSMG-C170
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SPEAKER
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR3
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR2
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR1
+Added Member To Class: ClassName=MOTOR_DVR Member=Component J? B8B-XH-A(LF)(SN)
+Added Member To Class: ClassName=POWER Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=POWER Member=Component U? AP63205WU-7
+Added Member To Class: ClassName=USB Member=Component U? W25Q128FVSIG

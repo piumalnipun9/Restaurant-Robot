@@ -1,0 +1,28 @@
+Change Component Footprint: Designator=J? Old Footprint=SAMTEC_FTSH-104-03-F-D New Footprint=SAMTEC_MTLW-104-06-G-D-160
+Change Component Comment : Designator=J? Old Comment=FTSH-104-03-F-D New Comment=MTLW-104-06-G-D-160
+Change component parameters: Designator = "J?" ("J?"); Footprint = "SAMTEC_FTSH-104-03-F-D"; UniqueID = "\HVIHZVJQ" ("\HVIHZVJQ")
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "MTLW-104-06-G-D-160"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J?" ("J?"); Footprint = "SAMTEC_MTLW-102-XX-X-D-XXX"; UniqueID = "\GZWXECJG" ("\GZWXECJG")
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/MTLW-102-05-G-D-180/Samtec/view-part/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Samtec"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "MTLW-102-05-G-D-180"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MTLW-102-05-G-D-180/Samtec/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NRST Pin=J?-04
+Add Net: Net with name "JTAG_TCK" already exists
+Add Net: Net with name "JTAG_TDI" already exists
+Add Net: Net with name "JTAG_TDO" already exists
+Add Net: Net with name "JTAG_TMS" already exists
+Add Net: Net with name "RX" already exists
+Add Net: Net with name "SP1_MISO2" already exists
+Add Net: Net with name "SP1_MOSI2" already exists
+Add Net: Net with name "SPI_CS3" already exists
+Add Net: Net with name "TX" already exists
+Added Member To Class: ClassName=CONNECTORS Member=Component J? MTLW-104-06-G-D-160
+Added Member To Class: ClassName=CONNECTORS Member=Component J? MTLW-102-XX-X-D-XXX

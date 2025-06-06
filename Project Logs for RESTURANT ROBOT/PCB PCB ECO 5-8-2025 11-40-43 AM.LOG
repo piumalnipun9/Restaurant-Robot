@@ -1,0 +1,49 @@
+Change Component Footprint: Designator=J? Old Footprint=FP-1-103168-8-MFG New Footprint=SAMTEC_FFMD-20-D-02.00-01
+Change Component Comment : Designator=J? Old Comment=1-103168-8 New Comment=FFMD-20-D-02.00-01
+Change Managed Component Library Link : Designator=J? Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=16CF7802-8BEF-4929-A936-61F396BB2C40 New ItemGUID= Old RevisionGUID=70596F78-9C0F-41D1-B2A9-690060C55438 New RevisionGUID=
+Change component parameters: Designator = "J?" ("J?"); Footprint = "FP-1-103168-8-MFG"; UniqueID = "\UGGGKSAO" ("\UGGGKSAO")
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "FFMD-20-D-02.00-01"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Net: Net with name "NetDS?_2" already exists
+Add Net: Net with name "SP1_MISO2" already exists
+Add Net: Net with name "SP1_MOSI2" already exists
+Add Net: Net with name "USB_N" already exists
+Add Net: Net with name "USB_P" already exists
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=POWER Member=Component C? CC1206KKX7R9BB475
+Added Member To Class: ClassName=POWER Member=Component C? 100nF
+Added Member To Class: ClassName=POWER Member=Component C? C3216X5R1E226M160AB
+Added Member To Class: ClassName=POWER Member=Component C? EEE-FK1E221P
+Added Member To Class: ClassName=POWER Member=Component C? 12065C105KAT2A
+Added Member To Class: ClassName=POWER Member=Component C? C3216X5R1E226M160AB
+Added Member To Class: ClassName=POWER Member=Component C? 1206ZD106KAT2A
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=USB Member=Component C? 4.7uF
+Added Member To Class: ClassName=POWER Member=Component DS? HSMG-C170
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SPEAKER
+Added Member To Class: ClassName=CONNECTORS Member=Component J? 90130-1140
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR1
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR2
+Added Member To Class: ClassName=CONNECTORS Member=Component J? 90130-1140
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR3
+Added Member To Class: ClassName=CONNECTORS Member=Component J? FFMD-20-D-02.00-01
+Added Member To Class: ClassName=MOTOR_DVR Member=Component J? B8B-XH-A(LF)(SN)
+Added Member To Class: ClassName=POWER Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=POWER Member=Component U? AP63205WU-7
+Added Member To Class: ClassName=USB Member=Component U? W25Q128FVSIG

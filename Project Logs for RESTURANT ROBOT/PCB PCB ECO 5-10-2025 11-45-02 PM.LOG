@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=+3V3 Pin=C?-1
+Removed Pin From Net: NetName=+3V3 Pin=C?-1
+Removed Pin From Net: NetName=+3V3 Pin=C?-1
+Removed Pin From Net: NetName=+3V3 Pin=C?-1
+Removed Pin From Net: NetName=+3V3 Pin=C?-1
+Removed Pin From Net: NetName=GND Pin=C?-2
+Removed Pin From Net: NetName=GND Pin=C?-2
+Removed Pin From Net: NetName=GND Pin=C?-2
+Removed Pin From Net: NetName=GND Pin=C?-2
+Removed Pin From Net: NetName=GND Pin=C?-2
+Removed Member From Class: ClassName=CONNECTORS Member=C?
+Add Pin To Net: Unknown Pin: Pin TP1-
+Add Pin To Net: Unknown Pin: Pin TP2-
+Add Pin To Net: Unknown Pin: Pin TP3-

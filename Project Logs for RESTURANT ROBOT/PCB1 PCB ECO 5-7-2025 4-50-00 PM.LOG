@@ -1,0 +1,99 @@
+Removed Pin From Net: NetName=RM_PU Pin=J?-1
+Removed Pin From Net: NetName=METAL_SEN2 Pin=J?-2
+Removed Pin From Net: NetName=RM_DR Pin=J?-3
+Removed Pin From Net: NetName=METAL_SEN4 Pin=J?-4
+Removed Pin From Net: NetName=RM_MF Pin=J?-5
+Removed Pin From Net: NetName=METAL_SEN6 Pin=J?-6
+Removed Pin From Net: NetName=RM_ALM Pin=J?-7
+Removed Pin From Net: NetName=METAL_SEN8 Pin=J?-8
+Change Component Footprint: Designator=J? Old Footprint=FP-90130-1140-MFG New Footprint=FP-90130-1140-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-90130-1140-MFG New Footprint=FP-90130-1140-MFG
+Added Component: Designator=J?(JST_B8B-XH-A(LF)(SN))
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/B8B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "JST Sales America Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B8B-XH-A(LF)(SN)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B8B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J?(JST_B8B-XH-A(LF)(SN))
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/B8B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "JST Sales America Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B8B-XH-A(LF)(SN)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B8B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J?(JST_B8B-XH-A(LF)(SN))
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/B8B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "JST Sales America Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B8B-XH-A(LF)(SN)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B8B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=LM_PU Pin=J?-1
+Added Pin To Net: NetName=METAL_SEN1 Pin=J?-1
+Added Pin To Net: NetName=RM_PU Pin=J?-1
+Added Pin To Net: NetName=GND Pin=J?-2
+Added Pin To Net: NetName=GND Pin=J?-2
+Added Pin To Net: NetName=METAL_SEN2 Pin=J?-2
+Added Pin To Net: NetName=LM_DR Pin=J?-3
+Added Pin To Net: NetName=METAL_SEN3 Pin=J?-3
+Added Pin To Net: NetName=RM_DR Pin=J?-3
+Added Pin To Net: NetName=GND Pin=J?-4
+Added Pin To Net: NetName=GND Pin=J?-4
+Added Pin To Net: NetName=METAL_SEN4 Pin=J?-4
+Added Pin To Net: NetName=LM_MF Pin=J?-5
+Added Pin To Net: NetName=METAL_SEN5 Pin=J?-5
+Added Pin To Net: NetName=RM_MF Pin=J?-5
+Added Pin To Net: NetName=GND Pin=J?-6
+Added Pin To Net: NetName=GND Pin=J?-6
+Added Pin To Net: NetName=METAL_SEN6 Pin=J?-6
+Added Pin To Net: NetName=LM_ALM Pin=J?-7
+Added Pin To Net: NetName=METAL_SEN7 Pin=J?-7
+Added Pin To Net: NetName=RM_ALM Pin=J?-7
+Added Pin To Net: NetName=GND Pin=J?-8
+Added Pin To Net: NetName=GND Pin=J?-8
+Added Pin To Net: NetName=METAL_SEN8 Pin=J?-8
+Add Net: Net with name "DB8" already exists
+Add Net: Net with name "DB9" already exists
+Add Net: Net with name "SP1_MISO2" already exists
+Add Net: Net with name "SP1_MOSI2" already exists
+Add Net: Net with name "USB_N" already exists
+Change Class Name : Old Net Name=POWER New Net Name=MOTOR_DVR
+Added Class: Name=POWER
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=SAM3X_MCU2 Member=Component C? CGA3E2C0G1H060D080AA
+Added Member To Class: ClassName=SAM3X_MCU2 Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component C? 4.7uF
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component FB? MH2029-300Y
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SPEAKER
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR3
+Added Member To Class: ClassName=CONNECTORS Member=Component J? B8B-XH-A(LF)(SN)
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR1
+Added Member To Class: ClassName=CONNECTORS Member=Component J? 90130-1140
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR2
+Added Member To Class: ClassName=MOTOR_DVR Member=Component J? B8B-XH-A(LF)(SN)
+Added Member To Class: ClassName=MOTOR_DVR Member=Component J? B8B-XH-A(LF)(SN)
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=METAL DETECT Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=MOTOR_DVR Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=USB Member=Component RV? CG0603MLC-05E
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=USB Member=Component U? W25Q128FVSIG

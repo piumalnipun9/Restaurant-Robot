@@ -1,0 +1,158 @@
+Change Component Footprint: Designator=DC-Jack? Old Footprint=694106301002 New Footprint=694106301002
+Change Component Footprint: Designator=J? Old Footprint=FP-90130-1140-MFG New Footprint=FP-90130-1140-MFG
+Change Component Footprint: Designator=J? Old Footprint=FP-90130-1140-MFG New Footprint=FP-90130-1140-MFG
+Change Component Footprint: Designator=Y2 Old Footprint=FP-NX3215SA-MFG New Footprint=FP-NX3215SA-MFG
+Added Component: Designator=J?(FP-1-103168-8-MFG)
+Add component (AddParameter): Name = "Approvals"; Value = "CSA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Board Standoff"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Plug"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Current Rating"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish - Mating"; Value = "GOLD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Bronze"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Mating Length"; Value = "8.08mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Post Length"; Value = "0.125inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Protection"; Value = "Yes (With)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Shape"; Value = "Square"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "10.16mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ELV"; Value = "Non-Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Fastening Type"; Value = "Detent"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Flammability Rating"; Value = "UL94 V-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gasket"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "11.18mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "High Speed Serial Data Connector"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "High Temperature Housing"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Thermoplastic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Material"; Value = "Thermoplastic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Keyed"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Contains Lead"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "53.64mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mating Alignment"; Value = "Yes (With)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mating Connector Lock"; Value = "Yes (With)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-65°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Contacts"; Value = "40"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "40"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PCB Mount Retention"; Value = "Without"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PCB Mounting Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reach SVHC Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Selectively Loaded"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "AMPMODU MOD II"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shrouded End Dimension"; Value = "1.68mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stabilizers"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Strain Relief"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Through Hole"; VariantName = "[No Variations]"
+Added Component: Designator=J?(FP-1-103168-8-MFG)
+Add component (AddParameter): Name = "Approvals"; Value = "CSA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Board Standoff"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Plug"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Current Rating"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish - Mating"; Value = "GOLD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Bronze"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Mating Length"; Value = "8.08mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Post Length"; Value = "0.125inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Protection"; Value = "Yes (With)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Shape"; Value = "Square"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "10.16mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ELV"; Value = "Non-Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Fastening Type"; Value = "Detent"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Flammability Rating"; Value = "UL94 V-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gasket"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "11.18mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "High Speed Serial Data Connector"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "High Temperature Housing"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Thermoplastic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Material"; Value = "Thermoplastic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Keyed"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Contains Lead"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "53.64mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mating Alignment"; Value = "Yes (With)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mating Connector Lock"; Value = "Yes (With)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-65°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Contacts"; Value = "40"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "40"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "40"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PCB Mount Retention"; Value = "Without"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PCB Mounting Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Reach SVHC Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Spacing"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Selectively Loaded"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "AMPMODU MOD II"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shrouded End Dimension"; Value = "1.68mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stabilizers"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Strain Relief"; Value = "No (Without)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Through Hole"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=NetD?_1 New Net Name=XUSB_N
+Change Net Name : Old Net Name=NetD?_3 New Net Name=XUSB_P
+Add Net: Net with name "NetDS?_2" already exists
+Add Net: Net with name "SP1_MISO2" already exists
+Add Net: Net with name "SP1_MOSI2" already exists
+Add Net: Net with name "USB_N" already exists
+Add Net: Net with name "USB_P" already exists
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=POWER Member=Component C? 1206ZD106KAT2A
+Added Member To Class: ClassName=POWER Member=Component C? 100nF
+Added Member To Class: ClassName=POWER Member=Component C? C3216X5R1E226M160AB
+Added Member To Class: ClassName=POWER Member=Component C? CC1206KKX7R9BB475
+Added Member To Class: ClassName=POWER Member=Component C? C3216X5R1E226M160AB
+Added Member To Class: ClassName=POWER Member=Component C? 12065C105KAT2A
+Added Member To Class: ClassName=POWER Member=Component C? EEE-FK1E221P
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=USB Member=Component C? 4.7uF
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=POWER Member=Component DS? HSMG-C170
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR1
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SPEAKER
+Added Member To Class: ClassName=CONNECTORS Member=Component J? 90130-1140
+Added Member To Class: ClassName=CONNECTORS Member=Component J? 1-103168-8
+Added Member To Class: ClassName=CONNECTORS Member=Component J? 90130-1140
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR3
+Added Member To Class: ClassName=CONNECTORS Member=Component J? 1-103168-8
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR2
+Added Member To Class: ClassName=MOTOR_DVR Member=Component J? B8B-XH-A(LF)(SN)
+Added Member To Class: ClassName=POWER Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=POWER Member=Component U? AP63205WU-7
+Added Member To Class: ClassName=USB Member=Component U? W25Q128FVSIG

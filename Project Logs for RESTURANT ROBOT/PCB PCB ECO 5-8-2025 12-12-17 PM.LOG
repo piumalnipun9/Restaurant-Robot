@@ -1,0 +1,51 @@
+Change Component Footprint: Designator=J? Old Footprint=SAMTEC_FFMD-20-D-02.00-01 New Footprint=SAMTEC-HTST-120-01-X-D
+Change Component Comment : Designator=J? Old Comment=FFMD-20-D-02.00-01 New Comment=SAMTEC-HTST-120-01-X-DJ
+Change component parameters: Designator = "J?" ("J?"); Footprint = "SAMTEC_FFMD-20-D-02.00-01"; UniqueID = "\BNPZXAIM" ("\BNPZXAIM")
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "J"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "SAMTEC-HTST-120-01-X-D"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "SAMTEC-HTST-120-01-X-D"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "SAMTEC-HTST-120-01-X-D"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "SAMTEC-HTST-120-01-X-DA"; VariantName = "[No Variations]"
+Add Net: Net with name "NetDS?_2" already exists
+Add Net: Net with name "SP1_MISO2" already exists
+Add Net: Net with name "SP1_MOSI2" already exists
+Add Net: Net with name "USB_N" already exists
+Add Net: Net with name "USB_P" already exists
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=MOTOR_DVR Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=POWER Member=Component C? C3216X5R1E226M160AB
+Added Member To Class: ClassName=POWER Member=Component C? 12065C105KAT2A
+Added Member To Class: ClassName=POWER Member=Component C? CC1206KKX7R9BB475
+Added Member To Class: ClassName=POWER Member=Component C? 1206ZD106KAT2A
+Added Member To Class: ClassName=POWER Member=Component C? 100nF
+Added Member To Class: ClassName=POWER Member=Component C? EEE-FK1E221P
+Added Member To Class: ClassName=POWER Member=Component C? C3216X5R1E226M160AB
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=USB Member=Component C? C1210C107M4PACTU
+Added Member To Class: ClassName=USB Member=Component C? CL21B104KOANNNC
+Added Member To Class: ClassName=USB Member=Component C? 4.7uF
+Added Member To Class: ClassName=POWER Member=Component DS? HSMG-C170
+Added Member To Class: ClassName=CONNECTORS Member=Component J? 90130-1140
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR1
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SAMTEC-HTST-120-01-X-DJ
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR2
+Added Member To Class: ClassName=CONNECTORS Member=Component J? B8B-XH-A(LF)(SN)
+Added Member To Class: ClassName=CONNECTORS Member=Component J? 90130-1140
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SONAR3
+Added Member To Class: ClassName=CONNECTORS Member=Component J? SPEAKER
+Added Member To Class: ClassName=MOTOR_DVR Member=Component J? B8B-XH-A(LF)(SN)
+Added Member To Class: ClassName=MOTOR_DVR Member=Component J? B8B-XH-A(LF)(SN)
+Added Member To Class: ClassName=USB Member=Component J? 105017-0001
+Added Member To Class: ClassName=POWER Member=Component R? RC0805JR-0710KL
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=MOTOR_DVR Member=Component U? SN74LVC2T45DCTR
+Added Member To Class: ClassName=POWER Member=Component U? AP63205WU-7
+Added Member To Class: ClassName=USB Member=Component U? W25Q128FVSIG

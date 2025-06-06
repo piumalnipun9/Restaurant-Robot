@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=L_DR Pin=U1-64
+Removed Pin From Net: NetName=R_DR Pin=U1-116
+Removed Pin From Net: NetName=LM_DR Pin=U4-3
+Removed Pin From Net: NetName=R_DR Pin=U4-6
+Removed Pin From Net: NetName=LM_PU Pin=U5-3
+Removed Pin From Net: NetName=L_PU Pin=U5-7
+Removed Member From Class: ClassName=BUTTONS Member=R6
+Removed Member From Class: ClassName=BUTTONS Member=R7
+Removed Member From Class: ClassName=CONNECTORS Member=R10
+Removed Member From Class: ClassName=CONNECTORS Member=R11
+Change Component Footprint: Designator=+1 Old Footprint=61300211021 New Footprint=61300211021
+Added Pin To Net: NetName=R_DR Pin=U1-64
+Added Pin To Net: NetName=L_DR Pin=U1-65
+Added Pin To Net: NetName=LM_PU Pin=U4-3
+Added Pin To Net: NetName=L_PU Pin=U4-6
+Added Pin To Net: NetName=LM_DR Pin=U5-3
+Added Pin To Net: NetName=R_DR Pin=U5-7
+Add Net: Net with name "SP1_MISO2" already exists
+Add Net: Net with name "SP1_MOSI2" already exists
+Added Member To Class: ClassName=POWER Member=Component C38 C3216X5R1E226M160AB
+Added Member To Class: ClassName=POWER Member=Component C41 1206ZD106KAT2A
+Added Member To Class: ClassName=CONNECTORS Member=Component J8 SONAR3
+Added Member To Class: ClassName=CONNECTORS Member=Component R4 RC0805JR-0710KL
+Added Member To Class: ClassName=CONNECTORS Member=Component R5 RC0805JR-0710KL
+Added Member To Class: ClassName=POWER Member=Component U8 AP63205WU-7
