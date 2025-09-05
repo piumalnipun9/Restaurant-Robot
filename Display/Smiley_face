@@ -1,0 +1,81 @@
+#include <Adafruit_GFX.h>
+#include <MCUFRIEND_kbv.h>
+
+MCUFRIEND_kbv tft;
+#define BLACK   0x0000
+#define BLUE    0x001F
+#define RED     0xF800
+#define GREEN   0x07E0
+#define CYAN    0x07FF
+#define MAGENTA 0xF81F
+#define YELLOW  0xFFE0
+#define WHITE   0xFFFF
+
+uint16_t face_colour = BLUE;
+void setup() {
+  uint16_t ID = tft.readID();
+  tft.begin(ID);
+  tft.setRotation(0);
+  tft.fillScreen(BLACK);
+
+  int centerX = 800 / 2;
+  int centerY = 480 / 2;
+
+  drawSmiley(centerX, centerY, 220);  // Center X, Y and radius
+}
+
+void loop() {
+  // nothing here
+}
+/*
+void drawSmiley(int x, int y, int r) {
+  // Face outline
+  tft.drawCircle(x, y, r, BLUE);
+
+  // Eyes (simple arcs or filled circles)
+  tft.fillCircle(x - r / 3, y - r / 3, r / 10, BLUE);  // Left eye
+  tft.fillCircle(x + r / 3, y - r / 3, r / 10, BLUE);  // Right eye
+
+  // Smile
+  int smile_radius = r / 2;
+  int smile_x = x;
+  int smile_y = y + r / 4;
+  for (int i = 30; i < 150; i++) {
+    float angle = radians(i);
+    int sx = smile_x + cos(angle) * smile_radius;
+    int sy = smile_y + sin(angle) * smile_radius;
+    tft.drawPixel(sx, sy, BLUE);
+  }
+}*/
+////
+
+void drawThickCircle(int x, int y, int r, int thickness, uint16_t color) {
+  for (int i = 0; i < thickness; i++) {
+    tft.drawCircle(x, y, r - i, color);
+  }
+}
+
+void drawThickArc(int x, int y, int r, int startAngle, int endAngle, int thickness, uint16_t color) {
+  for (int t = 0; t < thickness; t++) {
+    for (int angle = startAngle; angle <= endAngle; angle++) {
+      float rad = angle * 0.01745; // convert to radians
+      int x1 = x + cos(rad) * (r - t);
+      int y1 = y + sin(rad) * (r - t);
+      tft.drawPixel(x1, y1, color);
+    }
+  }
+}
+
+void drawSmiley(int x, int y, int radius) {
+  // Thick face outline
+  drawThickCircle(x, y, radius, 5, face_colour);
+
+  // Eyes
+  int eyeOffsetX = radius / 2.3;
+  int eyeOffsetY = radius / 2.3;
+  tft.fillCircle(x - eyeOffsetX, y - eyeOffsetY, 15, face_colour);
+  tft.fillCircle(x + eyeOffsetX, y - eyeOffsetY, 15, face_colour);
+
+  // Thick smile arc
+  drawThickArc(x, y + 10, radius / 2, 30, 150, 5, face_colour);
+}

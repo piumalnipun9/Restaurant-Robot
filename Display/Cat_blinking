@@ -1,0 +1,128 @@
+#include <Adafruit_GFX.h>
+#include <MCUFRIEND_kbv.h>
+
+MCUFRIEND_kbv tft;
+#define BLACK   0x0000
+#define BLUE    0x001F
+#define RED     0xF800
+#define GREEN   0x07E0
+#define CYAN    0x07FF
+#define MAGENTA 0xF81F
+#define YELLOW  0xFFE0
+#define WHITE   0xFFFF
+float s = 1.8;  // Scaling factor
+uint16_t lineColor = WHITE;
+uint16_t bgColor = BLACK;
+
+void setup() {
+  uint16_t ID = tft.readID();
+  tft.begin(ID);
+  tft.setRotation(0);  // Landscape
+  tft.fillScreen(bgColor);
+}
+
+void loop() {
+  int cx = tft.width() / 2;
+  int cy = tft.height() / 2;
+
+  drawCatFace(cx, cy);
+  delay(1000);
+
+  blinkEyes(cx, cy);
+  waveWhiskers(cx, cy);
+}
+
+void drawEyes(int cx, int cy, bool open) {
+  int eyeRadius = s * 40;
+  int eyeOffsetX = s * 90;
+  int eyeThickness = s * 6;
+
+  // Clear area first
+  tft.fillCircle(cx - eyeOffsetX, cy, eyeRadius + 1, bgColor);
+  tft.fillCircle(cx + eyeOffsetX, cy, eyeRadius + 1, bgColor);
+
+  if (open) {
+    for (int i = 0; i < eyeThickness; i++) {
+      tft.drawCircle(cx - eyeOffsetX, cy, eyeRadius - i, lineColor);
+      tft.drawCircle(cx + eyeOffsetX, cy, eyeRadius - i, lineColor);
+    }
+  } else {
+    int blinkHeight = s * 4;
+    tft.fillRect(cx - eyeOffsetX - eyeRadius, cy - blinkHeight / 2, eyeRadius * 2, blinkHeight, lineColor);
+    tft.fillRect(cx + eyeOffsetX - eyeRadius, cy - blinkHeight / 2, eyeRadius * 2, blinkHeight, lineColor);
+  }
+}
+/*
+void drawWhiskers(int cx, int cy, int offsetY) {
+  int eyeOffsetX = s * 90;
+  int whiskerLen = s * 25;
+  int whiskerSpacing = s * 8;
+
+  // Clear area first
+  tft.fillRect(cx - eyeOffsetX - s * 50, cy + 20 - s * 20, whiskerLen, s * 60, bgColor);
+  tft.fillRect(cx + eyeOffsetX + s * 25, cy + 20 - s * 20, whiskerLen, s * 60, bgColor);
+
+  for (int i = -1; i <= 1; i++) {
+    tft.drawFastHLine(cx - eyeOffsetX - s * 50, cy + i * whiskerSpacing + s * 20 + offsetY, whiskerLen, lineColor);
+    tft.drawFastHLine(cx + eyeOffsetX + s * 25, cy + i * whiskerSpacing + s * 20 - offsetY, whiskerLen, lineColor);
+  }
+}*/
+void drawWhiskers(int cx, int cy, int offsetY) {
+  int eyeOffsetX = s * 90;
+  int whiskerLen = s * 20;
+  int whiskerSpacing = s * 8;
+  int whiskerBaseY = cy + s * 50;  // ⬅️ moved down from s * 20 to s * 40
+
+  // Clear old whiskers
+  tft.fillRect(cx - eyeOffsetX - s * 50, whiskerBaseY - s * 20, whiskerLen, s * 60, bgColor);
+  tft.fillRect(cx + eyeOffsetX + s * 25, whiskerBaseY - s * 20, whiskerLen, s * 60, bgColor);
+
+  for (int i = -1; i <= 1; i++) {
+    tft.drawFastHLine(cx - eyeOffsetX - s * 50, whiskerBaseY + i * whiskerSpacing + offsetY, whiskerLen, lineColor);
+    tft.drawFastHLine(cx + eyeOffsetX + s * 25, whiskerBaseY + i * whiskerSpacing - offsetY, whiskerLen, lineColor);
+  }
+}
+
+
+void drawCatFace(int cx, int cy) {
+  // Eyes open
+  drawEyes(cx, cy, true);
+
+  // Eyebrows
+  int browLength = s * 30;
+  int browY = cy - s * 60;
+  tft.drawFastHLine(cx - s * 90 - browLength / 2, browY, browLength, lineColor);
+  tft.drawFastHLine(cx + s * 90 - browLength / 2, browY, browLength, lineColor);
+
+  // Mouth "~"
+  tft.drawPixel(cx - s * 10, cy + s * 40, lineColor);
+  tft.drawPixel(cx - s * 6, cy + s * 44, lineColor);
+  tft.drawPixel(cx - s * 2, cy + s * 46, lineColor);
+  tft.drawPixel(cx + s * 2, cy + s * 46, lineColor);
+  tft.drawPixel(cx + s * 6, cy + s * 44, lineColor);
+  tft.drawPixel(cx + s * 10, cy + s * 40, lineColor);
+
+  // Nose
+  tft.fillRect(cx - s * 2, cy + s * 30, s * 4, s * 2, lineColor);
+
+  // Whiskers
+  drawWhiskers(cx, cy, 0);
+}
+
+void blinkEyes(int cx, int cy) {
+  drawEyes(cx, cy, false);
+  delay(200);
+  drawEyes(cx, cy, true);
+  delay(200);
+}
+
+void waveWhiskers(int cx, int cy) {
+  for (int i = 0; i < 2; i++) {
+    drawWhiskers(cx, cy, 4);
+    delay(150);
+    drawWhiskers(cx, cy, -4);
+    delay(150);
+    drawWhiskers(cx, cy, 0);
+    delay(150);
+  }
+}

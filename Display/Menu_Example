@@ -1,0 +1,223 @@
+// Video tutorial explaining this example:
+// https://youtu.be/TekFq-HGAyI
+
+#include <Adafruit_GFX.h>
+#include <MCUFRIEND_kbv.h>
+MCUFRIEND_kbv tft;
+#include <TouchScreen.h>
+#include <FreeDefaultFonts.h>
+#define MINPRESSURE 200
+#define MAXPRESSURE 1000
+
+const int XP = 8, XM = A2, YP = A3, YM = 9;  //240x320 ID=0x9595
+const int TS_LEFT = 876, TS_RT = 139, TS_TOP = 390, TS_BOT = 769;
+
+TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300);
+int Cursor_X, Cursor_Y;
+bool Cursor_Pressed;
+bool Touch_getXY(void) {
+  TSPoint p = ts.getPoint();
+  pinMode(YP, OUTPUT);  //restore shared pins
+  pinMode(XM, OUTPUT);
+  digitalWrite(YP, HIGH);  //because TFT control pins
+  digitalWrite(XM, HIGH);
+  bool pressed = (p.z > MINPRESSURE && p.z < MAXPRESSURE);
+  if (pressed) {
+    Cursor_X = map(p.x, 913, 128, 0, tft.width());
+    Cursor_Y = map(p.y, 97, 909, 0, tft.height());
+  }
+  return pressed;
+}
+
+#define BLACK 0x0000
+#define BLUE 0x001F
+#define RED 0xF800
+#define GREEN 0x07E0
+#define CYAN 0x07FF
+#define MAGENTA 0xF81F
+#define YELLOW 0xFFE0
+#define WHITE 0xFFFF
+
+Adafruit_GFX_Button Zero_position, Control_Jog;
+Adafruit_GFX_Button Yes_Button, No_Button;
+Adafruit_GFX_Button Set_Jog_XY, Set_Jog_X, Set_Jog_Y, Set_Jog_Z, Ok_Button;
+uint8_t Current_Menu;
+void Change_Menu(uint8_t);
+void Refresh_Menu();
+int32_t Position_X;
+int32_t Position_Y;
+uint8_t Jog_Setup;  /// 0-XY, 1-X, 2-Y, 3-Z
+void Set_Jog_To(uint8_t jog) {
+  Jog_Setup = jog;
+}
+void setup() {
+
+  uint16_t ID = tft.readID();
+  tft.begin(ID);
+  tft.setRotation(0);
+  tft.fillScreen(BLACK);
+  tft.setFont(NULL);
+
+  Zero_position.initButton(&tft, 120, 110, 220, 32, WHITE, BLACK, MAGENTA, "Set 0 Pos", 2);
+  Control_Jog.initButton(&tft, 120, 184, 220, 32, WHITE, BLACK, MAGENTA, "Jog", 2);
+
+  Yes_Button.initButton(&tft, 60, 200, 100, 40, WHITE, RED, GREEN, "Yes", 2);
+  No_Button.initButton(&tft, 180, 200, 100, 40, WHITE, BLUE, GREEN, "No", 2);
+
+  Ok_Button.initButton(&tft, 180, 250, 30, 30, WHITE, BLUE, GREEN, "Ok", 2);
+  Set_Jog_XY.initButton(&tft, 180, 55, 120, 32, WHITE, BLACK, MAGENTA, "Jog XY", 2);
+  Set_Jog_X.initButton(&tft, 180, 100, 120, 32, WHITE, BLACK, MAGENTA, "Jog X", 2);
+  Set_Jog_Y.initButton(&tft, 180, 145, 120, 32, WHITE, BLACK, MAGENTA, "Jog Y", 2);
+  Set_Jog_Z.initButton(&tft, 180, 190, 120, 32, WHITE, BLACK, MAGENTA, "Jog Z", 2);
+
+  Change_Menu(1);
+}
+
+void Draw_Main_Menu() {
+  tft.fillScreen(BLACK);
+  tft.setTextColor(YELLOW);
+  tft.setTextSize(2);
+  tft.setCursor(20, 15);
+  tft.print("X: ");
+  tft.setCursor(20, 40);
+  tft.print("Y: ");
+  tft.setTextColor(GREEN);
+  tft.setTextSize(2);
+  tft.setCursor(90, 10);
+  tft.print(Position_X);
+  tft.setCursor(90, 35);
+  tft.print(Position_Y);
+  Zero_position.drawButton(true);
+  Control_Jog.drawButton(true);
+}
+void Refresh_Main_Menu() {
+  //tft.fillRect(75, 3, tft.width()- 2*75, 55, BLUE);
+  tft.setTextSize(2);
+  tft.setTextColor(BLACK);
+  tft.setCursor(90, 10);
+  tft.print(Position_X);
+  tft.setCursor(90, 35);
+  tft.print(Position_Y);
+
+  tft.setTextColor(GREEN);
+  tft.setCursor(90, 10);
+  tft.print(Position_X);
+  tft.setCursor(90, 35);
+  tft.print(Position_Y);
+  Zero_position.press(Cursor_Pressed && Zero_position.contains(Cursor_X, Cursor_Y));
+  if (Zero_position.justPressed()) {
+    Zero_position.drawButton(false);
+    Change_Menu(2);
+  }
+  Control_Jog.press(Cursor_Pressed && Control_Jog.contains(Cursor_X, Cursor_Y));
+  if (Control_Jog.justPressed()) {
+    Control_Jog.drawButton(false);
+    Change_Menu(4);
+  }
+}
+
+void Draw_Zero_Position_Menu() {
+  tft.fillScreen(BLACK);
+  tft.setTextColor(YELLOW);
+  tft.setTextSize(2);
+  tft.setCursor(20, 15);
+  tft.print("Set current position to 0,0,0?");
+  Yes_Button.drawButton(true);
+  No_Button.drawButton(true);
+}
+void Refresh_Zero_Position_Menu() {
+  Yes_Button.press(Cursor_Pressed && Yes_Button.contains(Cursor_X, Cursor_Y));
+  if (Yes_Button.justPressed()) {
+    Yes_Button.drawButton(false);
+    /// Do whatever is needed by this menu
+    Change_Menu(1);
+  }
+  No_Button.press(Cursor_Pressed && No_Button.contains(Cursor_X, Cursor_Y));
+  if (No_Button.justPressed()) {
+    No_Button.drawButton(false);
+    Change_Menu(1);
+  }
+}
+
+void Draw_Control_Jog_Menu() {
+  tft.fillScreen(BLACK);
+  tft.setTextColor(YELLOW);
+  tft.setTextSize(2);
+  tft.setCursor(20, 15);
+  if (Jog_Setup == 0) Set_Jog_XY.drawButton(false);
+  else Set_Jog_XY.drawButton(true);
+  if (Jog_Setup == 1) Set_Jog_X.drawButton(false);
+  else Set_Jog_X.drawButton(true);
+  if (Jog_Setup == 2) Set_Jog_Y.drawButton(false);
+  else Set_Jog_Y.drawButton(true);
+  if (Jog_Setup == 3) Set_Jog_Z.drawButton(false);
+  else Set_Jog_Z.drawButton(true);
+  Ok_Button.drawButton(true);
+}
+void Refresh_Control_Jog_Menu() {
+  Set_Jog_XY.press(Cursor_Pressed && Set_Jog_XY.contains(Cursor_X, Cursor_Y));
+  if (Set_Jog_XY.justPressed()) {
+    Set_Jog_XY.drawButton(false);
+    Set_Jog_To(0);
+    Draw_Control_Jog_Menu();
+  }
+  Set_Jog_X.press(Cursor_Pressed && Set_Jog_X.contains(Cursor_X, Cursor_Y));
+  if (Set_Jog_X.justPressed()) {
+    Set_Jog_X.drawButton(false);
+    Set_Jog_To(1);
+    Draw_Control_Jog_Menu();
+  }
+  Set_Jog_Y.press(Cursor_Pressed && Set_Jog_Y.contains(Cursor_X, Cursor_Y));
+  if (Set_Jog_Y.justPressed()) {
+    Set_Jog_Y.drawButton(false);
+    Set_Jog_To(2);
+    Draw_Control_Jog_Menu();
+  }
+  Set_Jog_Z.press(Cursor_Pressed && Set_Jog_Z.contains(Cursor_X, Cursor_Y));
+  if (Set_Jog_Z.justPressed()) {
+    Set_Jog_Z.drawButton(false);
+    Set_Jog_To(3);
+    Draw_Control_Jog_Menu();
+  }
+  Ok_Button.press(Cursor_Pressed && Ok_Button.contains(Cursor_X, Cursor_Y));
+  if (Ok_Button.justPressed()) {
+    Ok_Button.drawButton(false);
+    Change_Menu(1);
+  }
+}
+
+void Change_Menu(uint8_t no) {
+  Current_Menu = no;
+  switch (no) {
+    case 1:
+      Draw_Main_Menu();
+      break;
+    case 2:
+      Draw_Zero_Position_Menu();
+      break;
+    case 4:
+      Draw_Control_Jog_Menu();
+      break;
+  }
+}
+void Refresh_Menu() {
+  switch (Current_Menu) {
+    case 1:
+      Refresh_Main_Menu();
+      break;
+    case 2:
+      Refresh_Zero_Position_Menu();
+      break;
+    case 4:
+      Refresh_Control_Jog_Menu();
+      break;
+  }
+}
+
+
+
+void loop() {
+
+  Cursor_Pressed = Touch_getXY();
+  Refresh_Menu();
+}

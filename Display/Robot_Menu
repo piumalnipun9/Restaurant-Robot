@@ -1,0 +1,370 @@
+#include <XPT2046_Touchscreen.h>
+#include <SPI.h>
+#include <Adafruit_GFX.h>
+#include <MCUFRIEND_kbv.h>
+#include <FreeDefaultFonts.h>
+
+MCUFRIEND_kbv tft;
+
+// Pin configuration
+#define CS_PIN 10    // Touch CS
+#define TIRQ_PIN 22  // Optional, if you want to use IRQ
+#define MOSI_PIN 75
+#define MISO_PIN 74
+#define SCK_PIN 76
+
+//XPT2046_Touchscreen ts(CS_PIN);
+//XPT2046_Touchscreen ts(CS_PIN);  // Param 2 - NULL - No interrupts
+//XPT2046_Touchscreen ts(CS_PIN, 255);  // Param 2 - 255 - No interrupts
+XPT2046_Touchscreen ts(CS_PIN, TIRQ_PIN);  // Param 2 - Touch IRQ Pin - interrupt enabled polling
+int Cursor_X, Cursor_Y;
+bool Cursor_Pressed;
+// Define Colours
+#define BLACK 0x0000
+#define BLUE 0x001F
+#define RED 0xF800
+#define GREEN 0x07E0
+#define CYAN 0x07FF
+#define MAGENTA 0xF81F
+#define YELLOW 0xFFE0
+#define WHITE 0xFFFF
+
+Adafruit_GFX_Button Position, Settings;
+Adafruit_GFX_Button Yes_Button, No_Button;
+Adafruit_GFX_Button Increase_Button, Decrease_Button;
+Adafruit_GFX_Button Motors, Sensors, Display, Battery;
+Adafruit_GFX_Button Table_1, Table_2, Table_3, Table_4, Table_5, Table_6, Table_7, Table_8, Ok_Button, Back_Button;
+uint8_t Current_Menu;
+int32_t Position_X;
+int32_t Position_Y;
+int cx;
+int cy;
+//uint8_t Jog_Setup;  /// 0-XY, 1-X, 2-Y, 3-Z
+uint8_t Table_No;
+uint8_t Settings_No;
+void Change_Menu(uint8_t);
+void Set_Settings(uint8_t No) {
+  Settings_No = No;
+}
+
+void Set_Table_No(uint8_t No) {
+  Table_No = No;
+}
+void setup() {
+  Serial.begin(9600);
+  ts.begin();
+  // ts.begin(SPI1); // use alternate SPI port
+  ts.setRotation(0);
+  while (!Serial && (millis() <= 1000))
+    ;
+  uint16_t ID = tft.readID();
+  tft.begin(ID);
+  tft.setRotation(0);
+  tft.fillScreen(BLACK);
+  tft.setFont(NULL);
+  cx = tft.width() / 2;
+  cy = tft.height() / 2;
+  Position.initButton(&tft, 120, 110, 220, 32, WHITE, BLACK, MAGENTA, "Position", 2);  // x,y,width,height,border colour,  text colour, fill colour
+  Settings.initButton(&tft, 120, 200, 220, 32, WHITE, BLACK, MAGENTA, "Settings", 2);
+  Increase_Button.initButton(&tft, 60, 150, 100, 32, WHITE, BLACK, MAGENTA, "Up", 2);
+  Decrease_Button.initButton(&tft, 200, 150, 100, 32, WHITE, BLACK, MAGENTA, "Down", 2);
+  Yes_Button.initButton(&tft, 60, 200, 100, 40, WHITE, RED, GREEN, "Yes", 2);
+  No_Button.initButton(&tft, 180, 200, 100, 40, WHITE, BLUE, RED, "No", 2);
+
+  Ok_Button.initButton(&tft, 200, 315, 100, 30, WHITE, BLUE, GREEN, "Ok", 2);
+  Back_Button.initButton(&tft, 600, 315, 100, 30, WHITE, BLUE, GREEN, "Back", 2);
+  Motors.initButton(&tft, 200, 55, 120, 32, WHITE, BLACK, MAGENTA, "Motors", 2);
+  Sensors.initButton(&tft, 200, 120, 120, 32, WHITE, BLACK, MAGENTA, "Sensors", 2);
+  Display.initButton(&tft, 200, 185, 120, 32, WHITE, BLACK, MAGENTA, "Display", 2);
+  Battery.initButton(&tft, 200, 250, 120, 32, WHITE, BLACK, MAGENTA, "Battery", 2);
+
+  Table_1.initButton(&tft, 200, 55, 120, 32, WHITE, BLACK, MAGENTA, "Table 1", 2);
+  Table_2.initButton(&tft, 200, 120, 120, 32, WHITE, BLACK, MAGENTA, "Table 2", 2);
+  Table_3.initButton(&tft, 200, 185, 120, 32, WHITE, BLACK, MAGENTA, "Table 3", 2);
+  Table_4.initButton(&tft, 200, 250, 120, 32, WHITE, BLACK, MAGENTA, "Table 4", 2);
+  Table_5.initButton(&tft, 600, 55, 120, 32, WHITE, BLACK, MAGENTA, "Table 5", 2);
+  Table_6.initButton(&tft, 600, 120, 120, 32, WHITE, BLACK, MAGENTA, "Table 6", 2);
+  Table_7.initButton(&tft, 600, 185, 120, 32, WHITE, BLACK, MAGENTA, "Table 7", 2);
+  Table_8.initButton(&tft, 600, 250, 120, 32, WHITE, BLACK, MAGENTA, "Table 8", 2);
+  Change_Menu(1);
+}
+
+void loop() {
+
+  if (ts.touched()) {
+    TS_Point p = ts.getPoint();
+    Serial.print("Pressure = ");
+    Serial.print(p.z);
+    Serial.print(", x = ");
+    Position_X = p.x;
+    Serial.print(Position_X);
+    Serial.print(", y = ");
+    Position_Y = p.y;
+    Serial.print(Position_Y);
+    delay(30);
+    Serial.println();
+  }
+  Cursor_Pressed = Touch_getXY();
+  Serial.print(", Cursor_Pressed ");
+  Serial.println(Cursor_Pressed);
+  Refresh_Menu();
+}
+bool Touch_getXY(void) {
+  if (ts.touched()) {
+    TS_Point p = ts.getPoint();
+    Serial.print("Pressure = ");
+    Serial.print(p.z);
+    Serial.print(", x = ");
+    Cursor_X = p.x;
+    Serial.print(Cursor_X);
+    Serial.print(", y = ");
+    Cursor_Y = p.y;
+    Serial.print(Cursor_Y);
+    delay(30);
+    //Serial.println();
+    bool pressed = (Cursor_Y > 0);
+    return pressed;
+  }
+}
+
+void Change_Menu(uint8_t no) {
+  Current_Menu = no;
+  switch (no) {
+    case 1:
+      Draw_Main_Menu();
+      break;
+    case 2:
+      Draw_Position_Menu();
+      break;
+    case 4:
+      Draw_Settings_Menu();
+      break;
+  }
+}
+
+void Draw_Main_Menu() {
+  tft.fillScreen(BLACK);
+  tft.setTextColor(YELLOW);
+  tft.setTextSize(3);
+  tft.setCursor(cx - 150, 15);
+  tft.print("Evora Main Menu");
+
+  tft.setCursor(20, 15);
+  tft.print("X: ");
+  tft.setCursor(20, 40);
+  tft.print("Y: ");
+  tft.setTextColor(GREEN);
+  tft.setTextSize(3);
+  tft.setCursor(90, 10);
+  tft.print(Position_X);
+  tft.setCursor(90, 35);
+  tft.print(Position_Y);
+  Position.drawButton(true);
+  Settings.drawButton(true);
+  Back_Button.drawButton(true);
+}
+
+void Draw_Position_Menu() {
+  tft.fillScreen(BLACK);
+  tft.setTextColor(YELLOW);
+  tft.setTextSize(2);
+  tft.setCursor(20, 15);
+
+  if (Table_No == 1) Table_1.drawButton(false);
+  else Table_1.drawButton(true);
+  if (Table_No == 2) Table_2.drawButton(false);
+  else Table_2.drawButton(true);
+  if (Table_No == 3) Table_3.drawButton(false);
+  else Table_3.drawButton(true);
+  if (Table_No == 4) Table_4.drawButton(false);
+  else Table_4.drawButton(true);
+  if (Table_No == 5) Table_5.drawButton(false);
+  else Table_5.drawButton(true);
+  if (Table_No == 6) Table_6.drawButton(false);
+  else Table_6.drawButton(true);
+  if (Table_No == 7) Table_7.drawButton(false);
+  else Table_7.drawButton(true);
+  if (Table_No == 8) Table_8.drawButton(false);
+  else Table_8.drawButton(true);
+  Back_Button.drawButton(true);
+  Ok_Button.drawButton(true);
+}
+
+void Refresh_Position_Menu() {
+  if (pressed_right_position(9) && Cursor_Pressed) {
+    //Ok
+    Ok_Button.drawButton(false);
+    Change_Menu(1);
+  } else if (pressed_right_position(10) && Cursor_Pressed) {
+    //Back
+    Back_Button.drawButton(true);
+    Change_Menu(1);
+  }
+}
+
+void Draw_Settings_Menu() {
+  tft.fillScreen(BLACK);
+  tft.setTextColor(YELLOW);
+  tft.setTextSize(2);
+  tft.setCursor(cx - 120, 15);
+  tft.print("Evora Settings ");
+  /*Increase_Button.drawButton(true);
+  Decrease_Button.drawButton(true);
+  Yes_Button.drawButton(true);
+  No_Button.drawButton(true);*/
+  if (Settings_No == 1) Motors.drawButton(false);
+  else Motors.drawButton(true);
+  if (Settings_No == 2) Sensors.drawButton(false);
+  else Sensors.drawButton(true);
+  if (Settings_No == 3) Display.drawButton(false);
+  else Display.drawButton(true);
+  if (Settings_No == 4) Battery.drawButton(false);
+  else Battery.drawButton(true);
+  Ok_Button.drawButton(true);
+  Back_Button.drawButton(true);
+}
+void Refresh_Settings_Menu() {
+  if (pressed_right_settings(1) && Cursor_Pressed) {
+    //Motors
+    Motors.drawButton(false);
+  } else if (pressed_right_settings(2) && Cursor_Pressed) {
+    //Sensors
+    Sensors.drawButton(false);
+  } else if (pressed_right_settings(3) && Cursor_Pressed) {
+    //Display
+    Display.drawButton(false);
+  } else if (pressed_right_settings(4) && Cursor_Pressed) {
+    //Battery
+    Battery.drawButton(false);
+  } else if (pressed_right_settings(5) && Cursor_Pressed) {
+    //Ok
+    Ok_Button.drawButton(false);
+    Change_Menu(1);
+  } else if (pressed_right_settings(6) && Cursor_Pressed) {
+    //Back
+    Back_Button.drawButton(true);
+    Change_Menu(1);
+  }
+}
+
+void Refresh_Menu() {
+  switch (Current_Menu) {
+    case 1:
+      Refresh_Main_Menu();
+      break;
+    case 2:
+      Refresh_Position_Menu();
+      break;
+    case 4:
+      Refresh_Settings_Menu();
+      break;
+  }
+}
+
+void Refresh_Main_Menu() {
+  tft.fillRect(75, 3, 100, 55, BLUE);
+  /*tft.setTextSize(3);
+  tft.setTextColor(BLACK);
+  tft.setCursor(90, 10);
+  tft.print(8888);
+  tft.setCursor(90, 35);
+  tft.print(8888);*/
+
+  tft.setTextColor(GREEN);
+  tft.setCursor(90, 10);
+  tft.print(Position_X);
+  tft.setCursor(90, 35);
+  tft.print(Position_Y);
+
+
+  //Position.press(Cursor_Pressed && Position.contains(Cursor_X, Cursor_Y));
+  if (pressed_right(1) && Cursor_Pressed) {
+    Position.drawButton(false);
+    Change_Menu(2);
+  }
+  //Settings.press(Cursor_Pressed && Settings.contains(Cursor_X, Cursor_Y));
+  else if (pressed_right(2) && Cursor_Pressed) {
+    Settings.drawButton(false);
+    Change_Menu(4);
+  }
+  //Back_Button.drawButton(true);
+}
+
+bool pressed_right(int option) {
+  //int Position_X_range = [2500,2400];
+  //int Position_Y_range = [2400,2200];
+  switch (option) {
+    case 1:
+      if (Position_X > 2400 && Position_X < 2670 && Position_Y > 2200 && Position_Y < 2400) {
+        return 1;
+      } else {
+        return 0;
+      }
+    case 2:
+      if (Position_X > 2800 && Position_X < 3050 && Position_Y > 2550 && Position_Y < 2650) {
+        return 1;
+      } else {
+        return 0;
+      }
+  }
+}
+
+bool pressed_right_settings(int option) {
+  //int Position_X_range = [2500,2400];
+  //int Position_Y_range = [2400,2200];
+  switch (option) {
+    case 1:
+      if (Position_X > 2050 && Position_X < 2150 && Position_Y > 1800 && Position_Y < 1950) {
+        return 1;  //Motors
+      } else {
+        return 0;
+      }
+    case 2:
+      if (Position_X > 2300 && Position_X < 2600 && Position_Y > 1900 && Position_Y < 2050) {
+        return 1;  //Sensors
+      } else {
+        return 0;
+      }
+    case 3:
+      if (Position_X > 2680 && Position_X < 2800 && Position_Y > 2000 && Position_Y < 2200) {
+        return 1;  //Display
+      } else {
+        return 0;
+      }
+    case 4:
+      if (Position_X > 2850 && Position_X < 2950 && Position_Y > 2300 && Position_Y < 2500) {
+        return 1;  //Battery
+      } else {
+        return 0;
+      }
+    case 5:
+      if (Position_X > 2900 && Position_X < 3100 && Position_Y > 2550 && Position_Y < 2650) {
+        return 1;  //Ok
+      } else {
+        return 0;
+      }
+    case 6:
+      if (Position_X > 1700 && Position_X < 2000 && Position_Y > 1900 && Position_Y < 2200) {
+        return 1;  //Back
+      } else {
+        return 0;
+      }
+  }
+}
+
+bool pressed_right_position(int option) {
+  switch (option) {
+    case 9:
+      if (Position_X > 2900 && Position_X < 3100 && Position_Y > 2550 && Position_Y < 2650) {
+        return 1;  //Ok
+      } else {
+        return 0;
+      }
+    case 10:
+      if (Position_X > 1700 && Position_X < 1850 && Position_Y > 1900 && Position_Y < 2200) {
+        return 1;  //Back
+      } else {
+        return 0;
+      }
+  }
+}
